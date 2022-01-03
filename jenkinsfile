@@ -19,13 +19,13 @@ pipeline {
 						sh 'echo "Second test stage in Jenkinsfile"'
 					}	
 				}
-				stage('DEPLOY') {
-					steps {
-						sh 'echo "Final DEPLOY stage in Jenkinsfile"'
-					}
 				stage('STATUS') {
 					steps {
 						sh 'echo "pipeline job is comleted in Jenkinsfile"'
+				}
+				stage('DEPLOY') {
+					steps {
+						sh 'echo "Final DEPLOY stage in Jenkinsfile"'
 					}
 				}
 			}
