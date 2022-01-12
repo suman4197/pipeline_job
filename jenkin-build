@@ -8,5 +8,11 @@ pipeline {
 							sleep 5
 					}
 				}
+				stage('DEPLOY') {
+					steps {
+						sh 'scp -r /home/ec2-user/.m2/repository/com/efsavage/hello-world-war/1.0.0/hello-world-war-1.0.0.war/ ec2-user@172.31.40.0:/home/ec2-user/apache-tomcat-8.5.73/webapps/'
+	
+					}
+				}
       }
     }
