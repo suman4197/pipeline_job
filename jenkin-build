@@ -14,5 +14,10 @@ pipeline {
 	
 					}
 				}
+				stage('STATUS') {
+					steps {
+						sh 'echo "pipeline job succefully build in slave-01 and deployed in slave-02 in tomcat webapp folder"; sleep 5'	
+					}
+				}
       }
     }
