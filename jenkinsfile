@@ -26,7 +26,7 @@ pipeline {
 				}
 				stage('DEPLOY') {
 					steps {
-						sh 'echo "Final stage in Jenkinsfile"'
+						sh 'echo "Final DEPLOY stage in Jenkinsfile"'
 					}
 				}
 			}
