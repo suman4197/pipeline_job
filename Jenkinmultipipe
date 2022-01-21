@@ -2,28 +2,28 @@ pipeline {
     agent none 
         stages {
             stage ('STAGE 1'){
-                agent {label 'label1'}
+                agent {label 'master'}
                 steps {
                     echo "this is a stage one"
                     sh 'sleep 10'
                       }
                     }
             stage ('STAGE 2'){
-                agent {label 'label1'}
+                agent {label 'slave01'}
                 steps {
                     echo "build is successful"
                     sh 'sleep 10'
                       }
                     }
              stage ('STAGE 3'){
-                agent {label 'label2'}
+                agent {label 'slave01'}
                 steps {
                     echo "deploy is successful"
                     sh 'sleep 10'
                       }
                     }
               stage ('STAGE 4'){
-                agent {label 'label3'}
+                agent {label 'slave02'}
                 steps {
                     echo "test is successful"
                     sh 'sleep 10'
