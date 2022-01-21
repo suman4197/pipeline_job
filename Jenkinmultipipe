@@ -1,1 +1,33 @@
-
+pipeline {
+    agent none 
+        stages {
+            stage ('STAGE 1'){
+                agent {}
+                steps {
+                    echo "this is a stage one"
+                    sh 'sleep 10'
+                      }
+                    }
+            stage ('STAGE 2'){
+                agent {}
+                steps {
+                    echo "build is successful"
+                    sh 'sleep 10'
+                      }
+                    }
+             stage ('STAGE 3'){
+                agent {}
+                steps {
+                    echo "deploy is successful"
+                    sh 'sleep 10'
+                      }
+                    }
+              stage ('STAGE 4'){
+                agent {}
+                steps {
+                    echo "test is successful"
+                    sh 'sleep 10'
+                      }
+                    }
+                }
+          }
