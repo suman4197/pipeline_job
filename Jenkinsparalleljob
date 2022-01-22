@@ -7,6 +7,28 @@ pipeline{
                   sleep 5
                   }
                 }
+            stage ('PARALLEL DEPLOY') {
+                    stage ('deploy') {
+                        steps {
+                            echo "the file is being deployed"
+                            sleep 5
+                            }
+                          }
+                     stage ('testing-1') {
+                        steps {
+                             echo "this is a testing phase"
+                             sleep 5
+                             }
+                          }
+                        }
+                stage ('final test') {
+                    steps {
+                        echo "succesful"
+                        sleep 5
+                        }
+                      }
+                  
+                     
               }
             }
                 
