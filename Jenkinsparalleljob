@@ -8,6 +8,7 @@ pipeline{
                   }
                 }
             stage ('PARALLEL DEPLOY') {
+                parallel {
                     stage ('deploy') {
                         steps {
                             echo "the file is being deployed"
@@ -21,6 +22,7 @@ pipeline{
                              }
                           }
                         }
+                      }
                 stage ('final test') {
                     steps {
                         echo "succesful"
