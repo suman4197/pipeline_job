@@ -21,6 +21,13 @@ pipeline{
                              sleep 5
                              }
                           }
+                      stage ('testing-2') {
+                        steps {
+                             echo "this is a testing phase"
+                             sleep 5
+                             }
+                          }
+                      
                         }
                       }
                 stage ('final test') {
